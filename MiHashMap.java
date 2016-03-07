@@ -81,16 +81,18 @@ public class MiHashMap
         return retorna;
     }
     
-     /**
+    /**
      * Devuelve el valor asociado con la clave especificada o -1 en caso de que la clave no exista.     
      */
     public int get(String clave)
     {
         int retorna = -1;
-        for(int index=0; index< descripcion.length; index++)
+        
+        for(int index=0; index<descripcion.length; index++)
         {
-            String buscado = key[index]; 
-            if(buscado == clave)
+            String buscador = key[index]; 
+            
+            if(buscador == clave)
             {
                 retorna = descripcion[index];
             }
@@ -98,5 +100,18 @@ public class MiHashMap
 
         return retorna;
     }
+    
+     /**
+     *  Metodo que vacía el mapa.
+     */
+    public void clear()
+    {
+        int descripcion[] = new int[0];
+        
+        String key[] = new String[0];        
+    }
+
 }
+
+
 
